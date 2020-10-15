@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="statics.and.probabilty.FXMLDocumentController">
+    <children>
+      <Label layoutX="189.0" layoutY="14.0" prefHeight="30.0" prefWidth="230.0" text="Binomial Distribution">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="263.0" layoutY="42.0" prefHeight="25.0" prefWidth="80.0" text="X ~ BİN(n,p)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="barchart" barGap="3.0" layoutY="312.0" maxWidth="1.7976931348623157E308" prefHeight="290.0" prefWidth="602.0">
+        <xAxis>
+          <CategoryAxis label="x" prefHeight="21.0" prefWidth="439.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis disable="true" label="X =x" prefHeight="240.0" prefWidth="56.0" side="LEFT" upperBound="0.9">
+               <tickLabelFont>
+                  <Font size="10.0" />
+               </tickLabelFont></NumberAxis>
+        </yAxis>
+      </BarChart>
+      <Label layoutX="30.0" layoutY="75.0" prefHeight="30.0" prefWidth="37.0" text="n =">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="75.0" prefHeight="30.0" prefWidth="37.0" text="p =">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="116.0" prefHeight="30.0" prefWidth="37.0" text="x =">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="textfield_n" layoutX="75.0" layoutY="75.0" prefHeight="30.0" prefWidth="120.0" promptText="n değerini giriniz...">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TextField fx:id="textfield_x" layoutX="75.0" layoutY="116.0" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="120.0" promptText="x değerini giriniz...">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TextField fx:id="textfield_p" layoutX="439.0" layoutY="75.0" prefHeight="30.0" prefWidth="120.0" promptText="p değerini giriniz...">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <Button fx:id="btn1" layoutX="439.0" layoutY="159.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="120.0" text="Hesapla" />
+      <ComboBox fx:id="comboBox" layoutX="298.0" layoutY="116.0" onAction="#comboBoxChanged" prefHeight="30.0" prefWidth="110.0" />
+      <TextField fx:id="textfield_expectedValue" layoutX="46.0" layoutY="262.0" prefHeight="30.0" prefWidth="140.0" promptText="Beklenen Değer" />
+      <TextField fx:id="textfield_standartDeviation" layoutX="228.0" layoutY="262.0" prefHeight="30.0" prefWidth="140.0" promptText="Standart Sapma" />
+      <TextField fx:id="textfield_varience" layoutX="425.0" layoutY="261.0" prefHeight="30.0" prefWidth="140.0" promptText="Varyans" />
+      <TextField fx:id="textfield_binomialCumulativePs" layoutX="439.0" layoutY="116.0" prefHeight="30.0" prefWidth="120.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <CheckBox fx:id="checkBox" layoutX="228.0" layoutY="159.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="186.0" text="Normal Approximation">
+         <font>
+            <Font size="13.0" />
+         </font></CheckBox>
+      <Label layoutX="46.0" layoutY="229.0" prefHeight="26.0" prefWidth="110.0" text="Beklenen Değer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="229.0" prefHeight="26.0" prefWidth="110.0" text="Standart Sapma">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="425.0" layoutY="229.0" prefHeight="26.0" prefWidth="58.0" text="Varyans">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
